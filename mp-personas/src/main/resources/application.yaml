@@ -1,0 +1,13 @@
+#server:
+#    port: 9091
+javax:
+    sql:
+        DataSource:
+            personaDataSource:
+                dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
+                dataSource:
+                    url: jdbc:postgresql://127.0.0.1:5432/personas 
+                    user: postgres
+                    password: admin
+
+                                  

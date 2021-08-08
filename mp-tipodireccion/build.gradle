@@ -1,0 +1,29 @@
+ plugins { 
+    id 'java-library'
+    id 'io.quarkus' version '1.12.0.Final'
+}
+
+repositories {
+ jcenter()
+}
+
+ext{
+	quarkusVersion = '1.12.0.Final'
+}
+
+dependencies {
+
+	implementation enforcedPlatform("io.quarkus:quarkus-universe-bom:${quarkusVersion}")
+	implementation 'io.quarkus:quarkus-resteasy-jackson'
+	
+	//db
+	implementation group: 'io.quarkus', name: 'quarkus-hibernate-orm'
+	implementation group: 'io.quarkus', name: 'quarkus-jdbc-postgresql'
+	 		
+	//Consul
+	//compile "com.ecwid.consul:consul-api:1.4.5" 
+	//Health
+	//implementation group: 'io.quarkus', name: 'quarkus-smallrye-health'
+	
+	
+}
